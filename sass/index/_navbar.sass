@@ -1,0 +1,39 @@
+.navbar
+  padding: 20px 0 18px 
+  &-wrap
+    display: flex
+    justify-content: flex-start
+    align-items: center
+  &__logo
+    margin-right: 44px
+  &__menu
+    display: flex
+    justify-content: space-around
+    // height: 40px
+  &__toggle
+    display: none    
+    padding: 4px 12px
+    border: 1px solid $barier-color
+    border-radius: 5px
+    background-color: transparent
+    &-icon
+      display: inline-block
+      width: 30px
+      height: 30px
+      background:
+        image: url('../img/toggler-icon.svg')
+        repeat: no-repeat
+        size: 30px 30px
+  &__item
+    // display: inline-block
+    padding: 6px 20px 
+    &:not(:last-child)
+      border-right: 1px dashed $barier-color
+    a 
+      +open-sans-bold
+      font-size: 13px
+      text-transform: uppercase
+      text-decoration: none
+      color: #2d2d2d 
+      &:hover
+        color: $primary-color

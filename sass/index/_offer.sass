@@ -1,0 +1,77 @@
+.offer
+  margin-top: 40px
+  position: relative
+  background-color: $bg-light-color
+  &-wrap
+    display: flex
+    align-items: center
+    justify-content: center
+  &-title
+    position: relative
+    z-index: 1
+    width: 58%
+    overflow: hidden
+  &__title
+    +franklin-heavy
+    +text-up (96px , #ffffff)
+    word-wrap: normal    
+    line-height: 73px
+  &__decore
+    letter-spacing: -15px
+    +roboto-light
+  &-text
+    position: relative
+    z-index: 1
+    padding: 83px 0 80px
+    width: 42%
+    text-align: justify
+    background-color: $bg-light-color
+  &__subtitle
+    color: $text-color
+    +roboto-bold
+    font-size: 30px
+    margin-bottom: 10px
+  &__paragraph
+    color: $text-color
+    +roboto-light
+    font-size: 16px
+    line-height: 24px
+    margin-bottom: 30px
+  &__btn
+    display: block
+    width: 184px
+    text-align: center  
+  &::after
+    content: ''
+    position: absolute
+    height: 100%
+    width: 57%
+    background:
+      repeat: no-repeat
+    z-index: 0
+  &-rooms
+    &-title
+      padding-right: 97px
+      text-align: right         
+    &-text
+      padding-left: 30px         
+    &::after
+      top: 0
+      right: 43%
+      background: 
+        image: url('../img/triangles-right.png'), url('../img/main/bg-room.png')
+        position: right bottom, right 0
+        size: 282px 158px, auto 100%
+  &-bathhouse
+    &-title
+      padding-left: 97px      
+      text-align: left
+    &-text
+      padding-right: 30px
+    &::after
+      top: 0
+      left: 43%
+      background: 
+        image: url('../img/triangles-left.png'), url('../img/main/bg-bathhouse.png')
+        position: left bottom, left 0
+        size: 282px 158px, auto 100%

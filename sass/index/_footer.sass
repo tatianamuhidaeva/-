@@ -1,0 +1,32 @@
+.footer
+  background-color: $bg-dark-color
+  &-navbar
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 30px 0
+    border-bottom: 1px solid $barier-color
+    &__item
+      a
+        color: #ffffff
+        +open-sans
+        font-size: 12px
+        font-weight: 100        
+      &:not(:last-child)
+        border-right-color: transparent
+      &:last-child
+        padding-right: 0
+  &-copyright
+    padding: 30px 0
+    text-align: center    
+    &__text
+      max-width: 765px
+      margin: 0 auto
+      margin-bottom: 10px
+      color: #ffffff
+      +roboto-light
+      font-size: 12px
+      line-height: 17px
+      a
+        text-decoration: none
+        color: #ffffff
