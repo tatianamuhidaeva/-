@@ -3,9 +3,9 @@
   background:
     image: url('../img/triangles-left.png'),url('../img/triangles-right.png'),url('../img/main/bg-main.png')
     repeat: no-repeat
-    size: 300px 169px, 375px 211px, 100% 100%
-    position: bottom left, bottom right, 0 0
-  padding: 127px 0 185px
+    size: 300px 169px, 375px 211px, auto 100%
+    position: bottom left, bottom right, 50% 50%
+  padding: 131px 0 185px
   margin-bottom: 23px
   .container
     position: relative
@@ -15,10 +15,12 @@
       width: 252px
       height: 351px
       right: 0
-      top: -80px - 172px
+      top: -207px
       background:
         image: url('../img/main/bird.png')
         repeat: no-repeat
+        size: 100% auto
+        position: 0 0
       z-index: 0
   &-wrap
     position: relative
@@ -30,7 +32,6 @@
     +franklin-heavy
     text-transform: uppercase
     font-size: 166px
-    // margin-bottom: 70px
     &::after
       content: ''
       display: block
@@ -38,8 +39,6 @@
       height: 1px
       background-color: #ffffff
       margin: 7px auto 27px
-      
-
   &__text
     max-width: 765px
     +open-sans
@@ -51,3 +50,41 @@
   &__btn
     width: 198px
 
+@media (max-width: $md)
+  .main
+    background:
+      size: 25% auto, 25% auto, auto 100%      
+    &__title
+      font-size: 130px
+    &__text      
+      font-size: 16px
+@media (max-width: $sm)
+  .main
+    padding: 110px 0 160px
+    .container
+      &::after
+        top: -170px
+        width: 34%
+    &__title
+      font-size: 95px
+      &::after
+        width: 490px
+        margin: 7px auto 27px      
+    &__text      
+      font-size: 14px
+@media (max-width: $xs)
+  .main
+    background:
+      size: 144px auto, 144px auto, auto 100%      
+    // padding: 110px 0 160px
+    .container
+      &::after
+        top: -170px
+        width: 185px
+    &__title
+      font-size: 49px
+      &::after
+        width: 280px
+        // margin: 7px auto 27px      
+    &__text      
+      font-size: 12px

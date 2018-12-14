@@ -75,3 +75,78 @@
         image: url('../img/triangles-left.png'), url('../img/main/bg-bathhouse.png')
         position: left bottom, left 0
         size: 282px 158px, auto 100%
+
+@media (max-width: $md)
+  .offer
+    &::after
+      width: 100%
+      height: 430px
+    &-title
+      height: 45vw 
+      width: 100%
+      padding-top: 10vw
+    &-text
+      width: auto
+      max-width: 653px
+      padding: 55px 0
+    &-rooms
+      &-wrap
+        flex-direction: column      
+      &::after
+        right: 0
+        background: 
+          image: url('../img/main/bg-room.png')
+          position: 50% 0
+          size: 100% auto        
+
+    &-bathhouse
+      &-wrap
+        flex-direction: column-reverse      
+      &::after
+        left: 0
+        background: 
+          image: url('../img/main/bg-bathhouse.png')
+          position: 50% 0
+          size: 100% auto       
+
+
+@media (max-width: $sm)
+  .offer  
+    margin-top: 30px
+    &__title
+      font-size: 76px  
+      line-height: 65px
+    &-text
+      padding: 40px 0  
+    &__subtitle
+      font-size: 28px
+    &__paragraph
+      font-size: 15px
+    &-rooms
+      &-title
+        padding-right: 45px      
+    &-bathhouse
+      &-title
+        padding-left: 45px      
+@media (max-width: $xs)
+  .offer
+    margin-top: 20px
+    &__title
+      font-size: 45px  
+      line-height: 42px
+    &-text
+      padding: 25px 0 
+    &__subtitle
+      font-size: 25px
+    &__paragraph
+      font-size: 14px
+      line-height: 22px
+      margin-bottom: 20px         
+    &-rooms
+      &-title
+        padding-right: 20px      
+    &-bathhouse
+      &-title
+        padding-left: 20px      
+
+

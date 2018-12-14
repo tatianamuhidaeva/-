@@ -8,6 +8,9 @@
   &-text
     max-width: 653px
   &__subtitle
+    color: $text-color
+    +roboto-bold
+    font-size: 32px
     margin-bottom: 14px
   &__line-decoration
     width: 56px
@@ -23,4 +26,12 @@
   &__img
     width: 457px
     height: 320px 
+    margin-left: 15px
+
+@media (max-width: $md)
+  .welcome
+    &-wrap
+      flex-direction: column
+    &-text
+      margin-bottom: 30px
   

@@ -1,13 +1,14 @@
 .advanges
   border-top: 1px solid $barier-color
-  padding: 60px 0 27px
+  padding: 60px 0 7px
   &-cards
     display: flex
-    justify-content: flex-start
+    justify-content: space-around
+    flex-wrap: wrap
     &__item
-      width: 360px
-      margin-right: 30px
+      width: 31%
       text-align: center
+      margin-bottom: 20px
     &__img
       height: 110px
       margin-bottom: 17px
@@ -20,5 +21,22 @@
       font-size: 14px
       line-height: 20px
 
+
+@media (max-width: $md)
+  .advanges
+    // padding: 60px 0 27px
+    &-cards
+      &__item
+        width: 292px
+        &:not(:last-child) 
+          margin-right: 25px
+@media (max-width: 641px)
+  .advanges
+    &-cards
+      flex-direction: column
+      align-items: center
+      &__item
+        &:not(:last-child) 
+          margin-right: 0
       
 
