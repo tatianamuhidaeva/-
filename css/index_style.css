@@ -767,7 +767,6 @@ img {
 
 .welcome__img {
   width: 457px;
-  height: 320px;
   margin-left: 15px;
 }
 
@@ -780,6 +779,33 @@ img {
   }
   .welcome-text {
     margin-bottom: 30px;
+  }
+  .welcome__img {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome {
+    padding: 40px 0;
+  }
+  .welcome__subtitle {
+    font-size: 28px;
+  }
+  .welcome__paragraph {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .welcome {
+    padding: 25px 0;
+  }
+  .welcome__subtitle {
+    font-size: 25px;
+  }
+  .welcome__paragraph {
+    font-size: 14px;
   }
 }
 
