@@ -3,6 +3,7 @@
 
 .hidden
   display: none
+  
 
 @media (max-width: $xl)
   .block-xl
@@ -17,14 +18,20 @@
 @media (max-width: $md)
   .block-md
     display: block
+  .inline-md
+    display: inline
   .hidden-md
     display: none
 @media (max-width: $sm)
   .block-sm
     display: block
+  .inline-sm
+    display: inline    
   .hidden-sm
     display: none
-  *[class $= 'title'], *[class $= 'paragraph']
+  *[class $= 'title']
+    text-align: center    
+  *[class $= 'paragraph']
     text-align: center
 
 @media (max-width: $xs)

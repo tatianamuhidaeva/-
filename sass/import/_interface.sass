@@ -13,14 +13,69 @@
   &:focus
     outline: none
 .btn
-  height: 55px
+  height: 50px
   background: $primary-color 
   outline: none
-  border: 2px solid #f3f3f3
+  border: transparent
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.23)
   border-radius: 27px
   +roboto-medium
   +text-up(13px, #ffffff)
   line-height: 50px
-  cursor: pointer  
+  cursor: pointer 
+  &:hover
+    box-shadow: 0 0 0 3px #f3f3f3
   &:focus
     outline: none  
+.input
+  height: 53px
+  background: #ffffff
+  border-radius: 0
+  border: 1px solid #ededed
+  padding: 1px 46px 6px
+  +roboto-light
+  color: #606060
+  font-size: 12px
+  line-height: 24px
+  &:focus
+    outline: none 
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.23)
+.textarea
+  background: #ffffff
+  border-radius: 0
+  border: 1px solid #ededed
+  padding: 15px 47px
+  +roboto-light
+  color: #606060
+  font-size: 12px
+  &:focus
+    outline: none 
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.23)
+div[input$='__input-wrap']
+  position: relative
+.error
+  position: absolute
+  right: 0
+  top: 15px
+  color: red
+  font-size: 12px
+.arrow
+  position: relative
+  z-index: 5
+  width: 6px
+  min-height: 25px
+  height: 100%
+  background: 
+    // color: #ffffff
+    repeat: no-repeat
+    position: 50% 50%
+    size: 6px 25px
+  cursor: pointer
+  &-prev
+    background-image: url('../img/arrow-prev.png')
+  &-next
+    background-image: url('../img/arrow-next.png')
+
+@media (max-width: $sm)
+  .btn-o
+    background-color: $primary-color

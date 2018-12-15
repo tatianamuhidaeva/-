@@ -1,0 +1,95 @@
+.main 
+  color: #ffffff
+  background:
+    image: url('../img/triangles-left.png'),url('../img/triangles-right.png'),url('../img/bathhouse/bg-bathhouse-big.png')
+    repeat: no-repeat
+    size: 300px 169px, 375px 211px, auto 100%
+    position: bottom left, bottom right, 50% 50%
+  padding: 78px 0 84px
+  margin-bottom: 23px
+  text-align: center
+  &-wrap
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    z-index: 1
+  &__caption
+    +franklin-heavy
+    text-transform: uppercase
+    font-size: 110px
+    margin-bottom: 5px
+  &__subcaption
+    +franklin-heavy
+    text-transform: uppercase
+    font-size: 48px
+    &::after
+      content: ''
+      display: block
+      width: 580px
+      height: 1px
+      background-color: #ffffff
+      margin: 18px auto 21px
+  &__text
+    max-width: 765px
+    +open-sans
+    font-size: 19px
+    font-weight: 100
+    line-height: 26px
+    text-align: center
+    margin-bottom: 35px
+  &__btn
+    width: 198px
+
+@media (max-width: $xl)
+  .main
+    &__caption
+      font-size: 90px  
+@media (max-width: $lg)
+  .main
+    &__caption
+      font-size: 85px  
+@media (max-width: $md)
+  .main
+    background:
+      size: 25% auto, 25% auto, auto 100%      
+    &__caption
+      font-size: 70px
+    &__subcaption     
+      font-size: 42px 
+    &__text      
+      font-size: 16px
+@media (max-width: $sm)
+  .main
+    padding: 110px 0 160px
+    .container
+      &::after
+        top: -170px
+        width: 34%
+    &__caption
+      font-size: 50px  
+    &__subcaption     
+      font-size: 35px
+      &::after
+        width: 490px
+        margin: 7px auto 27px                   
+    &__text      
+      font-size: 14px
+@media (max-width: $xs)
+  .main
+    background:
+      size: 144px auto, 144px auto, auto 100%      
+    // padding: 110px 0 160px
+    .container
+      &::after
+        top: -170px
+        width: 185px
+    &__caption
+      font-size: 35px
+    &__subcaption     
+      font-size: 22px    
+      &::after
+        width: 280px      
+    &__text      
+      font-size: 12px
+      line-height: 1.5

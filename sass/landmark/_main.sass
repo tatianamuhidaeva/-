@@ -1,0 +1,45 @@
+.main
+  padding: 40px 0 40px
+  border-top: 5px solid $barier-color
+  &__title
+    color: $text-color
+    +roboto-bold
+    font-size: 30px
+    margin-bottom: 14px
+  &__paragraph
+    color: $text-color
+    +roboto-light
+    font-size: 16px
+    line-height: 25px
+    text-align: justify
+    hyphens: auto
+    margin-bottom: 12px
+  &__img
+    margin: 21px 0 33px
+    width: 100%
+@media (max-width: $md)          
+  .main
+    &__title
+      font-size: 28px  
+    &__paragraph      
+      font-size: 15px
+      line-height: 1.5
+@media (max-width: $sm)
+  .main
+    padding: 40px 0
+    &__title
+      font-size: 24px      
+    &__paragraph      
+      font-size: 14px 
+    &__img
+      margin: 15px 0         
+@media (max-width: $xs)
+  .main
+    padding: 25px 0
+    &__title
+      font-size: 20px      
+    &__paragraph      
+      font-size: 13px         
+    &__img
+      margin: 10px 0 
+

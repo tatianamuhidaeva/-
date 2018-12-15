@@ -1,0 +1,45 @@
+.slider
+  padding: 71px 0 65px
+  background-color: $bg-light-color
+  &-box
+    max-height: 500px
+    margin-bottom: 25px
+    overflow: hidden
+  &-nav    
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .slick
+      &-list
+        // display: inline-block
+        height: 108px
+        width: calc(100% - 40px)
+        margin-right: -1.4%
+      &-track
+        height: 108px
+      &-slide
+        padding: 0 6px
+        // width: 172px
+        &:not(.slick-current)
+          position: relative
+          &::after
+            content: ''
+            position: absolute
+            width: calc(100% - 12px)
+            height: 100%
+            top: 0
+            left: 6px
+            background-color: rgba(0, 0, 0, 0.5)
+        img
+          width: 100%
+        &:focus
+          outline: none
+
+@media (max-width: $sm)
+  .slider
+    padding: 40px 0
+@media (max-width: $xs)
+  .slider
+    padding: 25px 0
+
+

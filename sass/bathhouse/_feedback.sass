@@ -1,0 +1,114 @@
+.feedback
+  padding: 73px 0 93px
+  margin-bottom: 24px
+  background-image: url('../img/bathhouse/bg-sauna.png')
+  color: #ffffff
+  &__subcaption
+    +franklin-heavy
+    text-transform: uppercase    
+    font-size: 47px
+    text-align: center
+    margin-bottom: 35px
+    &::after
+      display: none
+  &-rules
+    display: flex
+    justify-content: space-between
+  &__rule
+    max-width: 335px
+    text-align: center
+    margin-bottom: 40px
+    &-title
+      +roboto-bold
+      +text-up(17px, #ffffff)
+      margin-bottom: 5px
+    &-text
+      +roboto-light
+      font-size: 14px
+      line-height: 21px
+  &__form
+    max-width: 976px
+    margin: 0 auto
+    &-group
+      display: flex
+      justify-content: space-between
+  &__input
+    width: 100%
+    position: relative
+    background:
+      repeat: no-repeat
+      position: 14px 50%
+    &[type="text"]
+      background-image: url('../img/form/name.png')
+    &[type="tel"]
+      background-image: url('../img/form/tel.png')
+    &[type="email"]
+      background-image: url('../img/form/mail.png')
+    &-wrap
+      width: 32.7%
+      margin-bottom: 12px
+  &__textarea
+    width: 100%
+    height: 96px
+    margin-bottom: 24px
+    background:
+      repeat: no-repeat
+      position: 17px 12px
+      image: url('../img/form/message.png')
+  &__btn
+    display: block
+    margin: 0 auto
+    width: 184px
+
+
+@media (max-width: $lg)
+  .feedback
+    &__subcaption
+      font-size: 42px 
+@media (max-width: $md)
+  .feedback
+    &__subcaption     
+      font-size: 35px 
+
+
+@media (max-width: $sm)
+  .feedback
+    padding: 40px 0
+    margin-bottom: 30px
+    &__subcaption     
+      font-size: 30px
+    &-rules
+      flex-direction: column
+      align-items: flex-start
+    &__rule
+      max-width: none
+      margin-bottom: 8px
+      &-title
+        font-size: 15px
+    &__form
+      &-group
+        display: block
+        // flex-direction: column
+        // align-items: flex-start
+    &__input-wrap
+      width: 100%
+
+@media (max-width: $xs)
+  .feedback
+    padding: 25px 0
+    &__subcaption     
+      font-size: 22px  
+    &__rule
+      margin-bottom: 5px
+      &-title
+        font-size: 14px 
+@media (max-width: $xxs)
+  .feedback
+    // padding: 25px 0
+    &__subcaption     
+      // font-size: 22px  
+    &__rule
+      // margin-bottom: 5px
+      &-title
+        font-size: 13px 
+        text-transform: none 

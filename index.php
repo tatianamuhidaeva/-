@@ -123,7 +123,7 @@
               отдых в Балаклаве.</p>
             <p>Все номера гостиничного комплекса имеют отдельные выходы на территорию!</p>
           </div>
-          <a class="offer__btn btn">Показать номера!</a>
+          <a class="offer__btn btn" href="rooms.php">Показать номера!</a>
         </div>
       </div>
     </section>
@@ -143,7 +143,7 @@
               устраивать бани для лечебных целей, но на русский манер.
             </p>
           </div>
-          <a class="offer__btn btn">более подробно!</a>
+          <a class="offer__btn btn" href="bathhouse.php">более подробно!</a>
         </div>
         <div class="offer-caption offer-bathhouse-caption">
           <h2 class="offer__caption offer-bathhouse__caption">Русская
@@ -166,6 +166,7 @@
           овеянных поэтическими легендами. </p>
         <div class="landmarks-list">
           <div class="landmarks-list__item">
+            <a class="landmarks-list__href" href="landmarks/1.php"></a>
             <img src="img/landmarks/1.png" alt="" class="landmarks-list__img">
             <div class="landmarks-list-text">
               <span class="landmarks-list__date">29 Марта, 2016</span>
@@ -174,6 +175,7 @@
           </div>
           <!-- /.landmarks__card -->
           <div class="landmarks-list__item">
+            <a class="landmarks-list__href" href="landmarks/2.php"></a>
             <img src="img/landmarks/2.png" alt="" class="landmarks-list__img">
             <div class="landmarks-list-text">
               <span class="landmarks-list__date">2 Апреля, 2016</span>
@@ -183,6 +185,7 @@
           </div>
           <!-- /.landmarks__card -->
           <div class="landmarks-list__item">
+            <a class="landmarks-list__href" href="landmarks/3.php"></a>
             <img src="img/landmarks/3.png" alt="" class="landmarks-list__img">
             <div class="landmarks-list-text">
               <span class="landmarks-list__date">8 Апреля, 2016</span>

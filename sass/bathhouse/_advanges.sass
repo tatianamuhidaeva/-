@@ -1,0 +1,48 @@
+.advanges
+  border-top: 5px solid $barier-color
+  padding: 40px 0 31px
+  &-cards
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    &__item
+      width: 31%
+      text-align: center
+      margin-bottom: 31px
+    &__img
+      position: relative
+      height: 131px
+      margin-bottom: 21px
+      img
+        position: absolute
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+    &__title
+      +roboto-bold
+      +text-up(17px, $text-color)
+      margin-bottom: 7px
+    &__text
+      +roboto-regular
+      font-size: 14px
+      line-height: 20px
+
+
+@media (max-width: $md)
+  .advanges
+    // padding: 60px 0 27px
+    &-cards
+      &__item
+        width: 292px
+        &:not(:last-child) 
+          margin-right: 25px
+@media (max-width: 641px)
+  .advanges
+    &-cards
+      flex-direction: column
+      align-items: center
+      &__item
+        &:not(:last-child) 
+          margin-right: 0
+      
+
