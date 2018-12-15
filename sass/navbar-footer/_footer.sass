@@ -1,0 +1,80 @@
+.footer
+  background-color: $bg-dark-color
+  // overflow-x: hidden
+  &-navbar
+    padding: 25px 0 28px 
+    border-bottom: 1px solid $barier-color
+    &__logo
+      margin-right: 5px
+    &__toggle
+      border: 1px solid #ffffff
+      border-radius: 5px 5px 0 5px
+      &-icon
+        background:
+          image: url('../img/toggler-icon_white.svg')
+    &__item
+      padding-left: 18px 
+      padding-right: 18px 
+      a
+        color: #ffffff
+        +open-sans
+        font-size: 12px
+        font-weight: 100
+      &:not(:last-child)
+        border-right-color: transparent
+    &-contacts
+      background-color: $bg-dark-color
+      &::before
+        background-color: $bg-dark-color
+      &__phone
+        color: #ffffff
+      &__address
+        color: #ffffff
+  &-copyright
+    padding: 30px 0
+    text-align: center
+    &__text
+      max-width: 806px
+      margin: 0 auto
+      margin-bottom: 3px
+      color: #ffffff
+      +roboto-light
+      font-size: 12px
+      line-height: 17px
+      a
+        text-decoration: none
+        color: #ffffff
+
+
+@media (max-width: $lg)
+  .footer
+    &-navbar
+      &__item
+        padding-left: 12px 
+        padding-right: 12px   
+@media (max-width: $md)
+  .footer
+    &-navbar
+      position: relative 
+      &__item
+        padding-left: 9px 
+        padding-right: 9px          
+      &-contacts
+        right: -175px
+@media (max-width: $sm)
+  .footer
+    &-navbar
+      &__logo
+        margin-right: 14px       
+      &__items
+        left: auto
+        top: -139px
+        right: -199px        
+        background-color: $bg-dark-color
+        border-radius: 5px 5px 5px 0
+      &-contacts
+        position: relative
+        top: auto
+        right: auto      
+
+

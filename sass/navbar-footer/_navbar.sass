@@ -1,0 +1,140 @@
+.navbar
+  padding: 20px 0 20px 
+  background-color: $bg-light-color
+  margin-bottom: 18px
+  // overflow: hidden
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &-group
+      display: flex
+      justify-content: flex-start
+      align-items: center      
+  &__logo
+    width: 82px
+    height: 46px  
+    margin-right: 15px
+  &__menu
+    display: flex
+    justify-content: space-around
+  &__toggle
+    display: none    
+    padding: 4px 12px
+    border: 1px solid $barier-color
+    border-radius: 5px 5px 5px 0
+    background-color: transparent
+    cursor: pointer
+    z-index: 10
+    &-icon
+      display: inline-block
+      width: 30px
+      height: 30px
+      background:
+        image: url('../img/toggler-icon.svg')
+        repeat: no-repeat
+        size: 30px 30px
+    &:hover, &:focus 
+      outline: none
+      border-color: $primary-color
+      .navbar__toggle-icon
+        background-image: url('../img/toggler-icon_primary.svg')      
+  &__items
+    display: flex
+  &__item
+    display: inline-block
+    padding: 6px 20px 
+    &:not(:last-child)
+      border-right: 1px dashed $barier-color
+    a 
+      +open-sans-bold
+      font-size: 13px
+      text-transform: uppercase
+      text-decoration: none
+      color: #2d2d2d 
+      &:hover
+        color: $primary-color
+  &-contacts
+    position: relative
+    text-align: left
+    background-color: $bg-light-color
+    padding-left: 10px
+    &::before
+      content: ''
+      position: absolute
+      width: 30px
+      height: 73px
+      top: -10px
+      left: -30px
+      background: 
+        color: $bg-light-color
+        image: url('../img/geomark-l.png')
+        repeat: no-repeat
+        position: 50% 0
+    &__phone
+      +roboto-thin
+      font-size: 19px
+      color: #2a2a2a
+      text-decoration: none
+    &__address
+      +roboto-thin
+      font-size: 11px
+      color: #2a2a2a
+      line-height: 17px
+      margin-top: 2px
+
+
+@media (max-width: $lg)
+  .navbar
+    &__logo
+      margin-right: 1.2%
+    &__item
+      padding-left: 13px 
+      padding-right: 13px     
+@media (max-width: $md)
+  .navbar
+    position: relative
+    &__item
+      padding-left: 9px 
+      padding-right: 9px    
+    &-contacts
+      position: absolute
+      right: -151px
+      top: 12px
+      transition-duration: 0.5s
+      transition-delay: 0.2s
+      &:hover
+        right: 0
+@media (max-width: $sm)
+  .navbar
+    padding: 10px 0 10px 
+    &__logo
+      margin-right: 14px    
+    &__menu
+      position: relative
+    &__toggle
+      display: block      
+    &__items
+      display: none
+      position: absolute
+      top: 42px
+      left: 0
+      width: 200px
+      background-color: #ffffff
+      border: 1px solid $primary-color
+      border-radius: 0 5px 5px 5px
+      z-index: 10
+    &__item
+      display: block
+      border: none
+    &-contacts
+      position: relative
+      top: auto
+      right: auto
+@media (max-width: $xxs)
+  .navbar  
+    &-contacts
+      &::before
+        display: none
+      &__phone
+        font-size: 16px

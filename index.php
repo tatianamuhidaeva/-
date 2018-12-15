@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Балаклава | Главная</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="css/index_style.css">
 </head>
@@ -21,18 +21,18 @@
           <span class="navbar__toggle-icon"></span>
         </button>
         <div class="navbar__items">
-          <div class="navbar__item"><a href="#"">О&nbsp;нас</a></div>
-          <div class="navbar__item"><a href="#"">Наши&nbsp;номера</a></div>
-          <div class="navbar__item"><a href="#"">Русская&nbsp;баня</a></div>
-          <div class="navbar__item"><a href="#"">Достопримечательности</a></div>
-          <div class="navbar__item"><a href="#"">Контакты</a></div></div>
+          <div class="navbar__item"><a href="about.php">О&nbsp;нас</a></div>
+          <div class="navbar__item"><a href="rooms.php">Наши&nbsp;номера</a></div>
+          <div class="navbar__item"><a href="bathhouse.php">Русская&nbsp;баня</a></div>
+          <div class="navbar__item"><a href="landmarks.php">Достопримечательности</a></div>
+          <div class="navbar__item"><a href="contacts.php">Контакты</a></div>
       </nav>
     </div>
   </div>
   <section class="main">
     <div class="container">
       <div class="main-wrap">
-        <h1 class="main__title">Balaclava</h1>
+        <h1 class="main__caption">Balaclava</h1>
         <p class="main__text">
           «Белый дом с орлами» – место для спокойного отдыха у моря, вдали от шумного города. Мы
           предлагаем Вам
@@ -107,9 +107,9 @@
 
     <section class="offer offer-rooms">
       <div class="container offer-wrap offer-rooms-wrap">
-        <div class="offer-title offer-rooms-title">
-          <h2 class="offer__title offer-rooms__title">уютные
-            <span class="offer__decore">&mdash;&mdash;</span>&nbsp;номера
+        <div class="offer-caption offer-rooms-caption">
+          <h2 class="offer__caption offer-rooms__caption">уютные
+            <br><span class="offer__decore">&mdash;&mdash;</span>&nbsp;номера
           </h2>
           <br><br>
         </div>
@@ -145,8 +145,8 @@
           </div>
           <a class="offer__btn btn">более подробно!</a>
         </div>
-        <div class="offer-title offer-bathhouse-title">
-          <h2 class="offer__title offer-bathhouse__title">Русская
+        <div class="offer-caption offer-bathhouse-caption">
+          <h2 class="offer__caption offer-bathhouse__caption">Русская
             <br>баня&nbsp;<span class="offer__decore">&mdash;&mdash;&mdash;&mdash;</span>
           </h2>
           <br>
@@ -206,11 +206,11 @@
             <span class="footer-navbar__toggle-icon navbar__toggle-icon"></span>
           </button>
           <div class="footer-navbar__items navbar__items">
-          <div class="footer-navbar__item navbar__item"><a href="#"">О&nbsp;нас</a></div>
-            <div class="footer-navbar__item navbar__item"><a href="#"">Наши&nbsp;номера</a></div>
-            <div class="footer-navbar__item navbar__item"><a href="#"">Русская&nbsp;баня</a></div>
-            <div class="footer-navbar__item navbar__item"><a href="#"">Достопримечательности</a></div>
-            <div class="footer-navbar__item navbar__item"><a href="#"">Контакты</a></div>
+              <div class="footer-navbar__item navbar__item"><a href="about.php">О&nbsp;нас</a></div>
+              <div class="footer-navbar__item navbar__item"><a href="rooms.php">Наши&nbsp;номера</a></div>
+              <div class="footer-navbar__item navbar__item"><a href="bathhouse.php">Русская&nbsp;баня</a></div>
+              <div class="footer-navbar__item navbar__item"><a href="landmarks.php">Достопримечательности</a></div>
+              <div class="footer-navbar__item navbar__item"><a href="contacts.php">Контакты</a></div>
           </div>
         </nav>
     </div>
