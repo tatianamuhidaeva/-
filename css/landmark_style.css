@@ -488,14 +488,14 @@ template {
           box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.23);
 }
 
-div[input$='__input-wrap'] {
+div[class$='__input-wrap'] {
   position: relative;
 }
 
 .error {
   position: absolute;
-  right: 0;
-  top: 15px;
+  right: 10px;
+  bottom: 5px;
   color: red;
   font-size: 12px;
 }
@@ -663,26 +663,34 @@ img {
 }
 
 .navbar-contacts {
-  position: relative;
   text-align: left;
   background-color: #f7f9f9;
   padding-left: 10px;
+  white-space: nowrap;
 }
 
-.navbar-contacts::before {
-  content: '';
-  position: absolute;
+.navbar-contacts-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 8px;
+}
+
+.navbar-contacts__icon {
   width: 30px;
   height: 73px;
-  top: -10px;
-  left: -30px;
   background-color: #f7f9f9;
   background-image: url("../img/geomark-l.png");
   background-repeat: no-repeat;
   background-position: 50% 0;
+  cursor: default;
 }
 
 .navbar-contacts__phone {
+  display: block;
   font-family: 'Roboto Thin' , sans-serif;
   font-size: 19px;
   color: #2a2a2a;
@@ -716,16 +724,15 @@ img {
     padding-right: 9px;
   }
   .navbar-contacts {
-    position: absolute;
-    right: -151px;
-    top: 12px;
-    -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s;
-    -webkit-transition-delay: 0.2s;
-            transition-delay: 0.2s;
+    display: none;
   }
-  .navbar-contacts:hover {
+  .navbar-contacts__icon {
+    cursor: pointer;
+  }
+  .navbar-contacts-wrap {
+    position: absolute;
     right: 0;
+    top: 0;
   }
 }
 
@@ -758,14 +765,21 @@ img {
     border: none;
   }
   .navbar-contacts {
+    display: block;
+  }
+  .navbar-contacts__icon {
+    cursor: default;
+  }
+  .navbar-contacts-wrap {
+    margin-right: 0;
     position: relative;
-    top: auto;
     right: auto;
+    top: auto;
   }
 }
 
 @media (max-width: 400px) {
-  .navbar-contacts::before {
+  .navbar-contacts__icon {
     display: none;
   }
   .navbar-contacts__phone {
@@ -1023,7 +1037,7 @@ img {
   background-color: #393939;
 }
 
-.footer-navbar-contacts::before {
+.footer-navbar-contacts__icon {
   background-color: #393939;
 }
 

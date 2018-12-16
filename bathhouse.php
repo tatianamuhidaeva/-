@@ -155,10 +155,11 @@
         </form>
       </div>
     </section>
+
   <?php include('footer.php'); ?>
   <script src="js/slick.min.js"></script>
-  <script src="js/slick_customize.js"></script>
   <script src="js/validate-and-sendMail.js"></script>
+  <script src="js/slick_customize.js"></script>
 <body>
 </body>
 </html>

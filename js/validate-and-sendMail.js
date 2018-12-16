@@ -2,6 +2,7 @@ $(document).ready(function (){
   $('form .error').css('visibility', 'hidden');
                         
   $('.btn-submit').on('click', function (event) {
+    console.log('ku-ku')
     event.preventDefault();
     var flag = true;
     var form = $(this).parent();
@@ -13,8 +14,8 @@ $(document).ready(function (){
     var errorNameL = form.find('.error-name');
     var errorPhoneL = form.find('.error-phone');
     var errorEmailL = form.find('.error-email');
-    // console.log(errorNameL);
-    // console.log(errorPhoneL);
+    console.log(errorNameL);
+    console.log(errorPhoneL);
     // console.log(nameTrim.match(/^[0-9a-zA-ZА-Яа-я\s]*$/));
     // console.log(phone.match(/\+7[0-9]{10}/));
     //проверка телефона
@@ -44,11 +45,11 @@ $(document).ready(function (){
     } else {
       errorNameL.css('visibility', 'hidden');
     }
-    if (email === ""){
+    if (emailTrim === ""){
       errorEmailL.text('Пожалуйста, введите email');
       errorEmailL.css('visibility', 'visible');
       flag = false;
-    } else if (email.match(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/) === null){
+    } else if (emailTrim.match(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/) === null){
       errorEmailL.text('Введите email в формате my-mail@email.com');
       errorEmailL.css('visibility', 'visible');
       flag = false;

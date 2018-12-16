@@ -2,7 +2,6 @@
   padding: 20px 0 20px 
   background-color: $bg-light-color
   margin-bottom: 18px
-  // overflow: hidden
   &-wrap
     display: flex
     justify-content: space-between
@@ -55,23 +54,25 @@
       &:hover
         color: $primary-color
   &-contacts
-    position: relative
     text-align: left
     background-color: $bg-light-color
     padding-left: 10px
-    &::before
-      content: ''
-      position: absolute
+    white-space: nowrap
+    &-wrap
+      display: flex
+      align-items: center
+      margin-right: 8px
+    &__icon
       width: 30px
       height: 73px
-      top: -10px
-      left: -30px
       background: 
         color: $bg-light-color
         image: url('../img/geomark-l.png')
         repeat: no-repeat
         position: 50% 0
+      cursor: default
     &__phone
+      display: block
       +roboto-thin
       font-size: 19px
       color: #2a2a2a
@@ -82,8 +83,6 @@
       color: #2a2a2a
       line-height: 17px
       margin-top: 2px
-
-
 @media (max-width: $lg)
   .navbar
     &__logo
@@ -91,20 +90,20 @@
     &__item
       padding-left: 13px 
       padding-right: 13px     
-@media (max-width: $md)
+@media (max-width: $md)  
   .navbar
     position: relative
     &__item
       padding-left: 9px 
-      padding-right: 9px    
+      padding-right: 9px
     &-contacts
-      position: absolute
-      right: -151px
-      top: 12px
-      transition-duration: 0.5s
-      transition-delay: 0.2s
-      &:hover
+      display: none
+      &__icon
+        cursor: pointer
+      &-wrap
+        position: absolute
         right: 0
+        top: 0
 @media (max-width: $sm)
   .navbar
     padding: 10px 0 10px 
@@ -128,13 +127,18 @@
       display: block
       border: none
     &-contacts
-      position: relative
-      top: auto
-      right: auto
+      display: block
+      &__icon
+        cursor: default
+      &-wrap
+        margin-right: 0
+        position: relative
+        right: auto
+        top: auto        
 @media (max-width: $xxs)
   .navbar  
     &-contacts
-      &::before
+      &__icon
         display: none
       &__phone
         font-size: 16px

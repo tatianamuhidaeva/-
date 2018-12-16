@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Балаклава | О нас</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link rel="stylesheet" href="/css/landmark_style.css">
+  <link rel="stylesheet" href="/balaclava/css/landmark_style.css">
 </head>
   <?php include('../navbar.php'); ?>
   <section class="main">
@@ -33,8 +33,8 @@
         <div class="landmarks-list">
           <!-- /.landmarks__card -->
           <div class="landmarks-list__item">
-            <a class="landmarks-list__href" href="/landmarks/4.php"></a>
-            <img src="/img/landmarks/4.png" alt="19 батарея Драпушко, Балаклава" class="landmarks-list__img">
+            <a class="landmarks-list__href" href="/balaclava/landmarks/4.php"></a>
+            <img src="/balaclava/img/landmarks/4.png" alt="19 батарея Драпушко, Балаклава" class="landmarks-list__img">
             <div class="landmarks-list-text">
               <div class="landmarks-list__decor"></div>
               <h4 class="landmarks-list__text">19 батарея Драпушко, Балаклава</h4>
@@ -42,8 +42,8 @@
           </div>
           <!-- /.landmarks__card -->
           <div class="landmarks-list__item">
-            <a class="landmarks-list__href" href="/landmarks/5.php"></a>
-            <img src="/img/landmarks/5.png" alt="Бочка смерти, Балаклава" class="landmarks-list__img">
+            <a class="landmarks-list__href" href="/balaclava/landmarks/5.php"></a>
+            <img src="/balaclava/img/landmarks/5.png" alt="Бочка смерти, Балаклава" class="landmarks-list__img">
             <div class="landmarks-list-text">
               <div class="landmarks-list__decor"></div>
               <h4 class="landmarks-list__text">Бочка смерти, Балаклава</h4>
@@ -51,8 +51,8 @@
           </div>
           <!-- /.landmarks__card -->
           <div class="landmarks-list__item">
-            <a class="landmarks-list__href" href="/landmarks/6.php"></a>
-            <img src="/img/landmarks/6.png" alt="Мыс Айя, Балаклава" class="landmarks-list__img">
+            <a class="landmarks-list__href" href="/balaclava/landmarks/6.php"></a>
+            <img src="/balaclava/img/landmarks/6.png" alt="Мыс Айя, Балаклава" class="landmarks-list__img">
             <div class="landmarks-list-text">
               <div class="landmarks-list__decor"></div>
               <h4 class="landmarks-list__text">Мыс Айя, Балаклава</h4>
