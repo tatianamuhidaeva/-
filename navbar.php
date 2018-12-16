@@ -1,3 +1,4 @@
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <div class="navbar">
     <div class="container navbar-wrap">
       <div class="navbar-wrap-group">

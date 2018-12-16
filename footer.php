@@ -41,5 +41,4 @@
       </p>
     </div>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="/balaclava/js/togglerMenu.js"></script>

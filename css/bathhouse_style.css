@@ -488,18 +488,6 @@ template {
           box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.23);
 }
 
-div[class$='__input-wrap'] {
-  position: relative;
-}
-
-.error {
-  position: absolute;
-  right: 10px;
-  bottom: 5px;
-  color: red;
-  font-size: 12px;
-}
-
 .arrow {
   position: relative;
   z-index: 5;
@@ -1280,6 +1268,66 @@ img {
   line-height: 21px;
 }
 
+@media (max-width: 1095px) {
+  .feedback__subcaption {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 992px) {
+  .feedback__subcaption {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feedback {
+    padding: 40px 0;
+    margin-bottom: 30px;
+  }
+  .feedback__subcaption {
+    font-size: 30px;
+  }
+  .feedback-rules {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .feedback__rule {
+    max-width: none;
+    margin-bottom: 8px;
+  }
+  .feedback__rule-title {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .feedback {
+    padding: 25px 0;
+  }
+  .feedback__subcaption {
+    font-size: 22px;
+  }
+  .feedback__rule {
+    margin-bottom: 5px;
+  }
+  .feedback__rule-title {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .feedback__rule-title {
+    font-size: 13px;
+    text-transform: none;
+  }
+}
+
 .feedback__form {
   max-width: 976px;
   margin: 0 auto;
@@ -1333,69 +1381,25 @@ img {
   width: 184px;
 }
 
-@media (max-width: 1095px) {
-  .feedback__subcaption {
-    font-size: 42px;
-  }
+div[class$='__input-wrap'] {
+  position: relative;
 }
 
-@media (max-width: 992px) {
-  .feedback__subcaption {
-    font-size: 35px;
-  }
+.error {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  color: red;
+  font-size: 12px;
+  white-space: nowrap;
 }
 
 @media (max-width: 768px) {
-  .feedback {
-    padding: 40px 0;
-    margin-bottom: 30px;
-  }
-  .feedback__subcaption {
-    font-size: 30px;
-  }
-  .feedback-rules {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .feedback__rule {
-    max-width: none;
-    margin-bottom: 8px;
-  }
-  .feedback__rule-title {
-    font-size: 15px;
-  }
   .feedback__form-group {
     display: block;
   }
   .feedback__input-wrap {
     width: 100%;
-  }
-}
-
-@media (max-width: 576px) {
-  .feedback {
-    padding: 25px 0;
-  }
-  .feedback__subcaption {
-    font-size: 22px;
-  }
-  .feedback__rule {
-    margin-bottom: 5px;
-  }
-  .feedback__rule-title {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 400px) {
-  .feedback__rule-title {
-    font-size: 13px;
-    text-transform: none;
   }
 }
 
@@ -1511,12 +1515,93 @@ img {
   }
 }
 
+.modal-success {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+}
+
+.modal-success-wrap {
+  position: relative;
+  background-color: #f7f9f9;
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal-success__close {
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.modal-success__header {
+  padding: 10px 0;
+  font-family: 'Roboto Bold' , sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #3fc380;
+  margin-bottom: 20px;
+}
+
+.modal-success__text {
+  padding: 0 20px;
+  margin: 0 auto;
+  font-family: 'Roboto Medium' , sans-serif;
+  font-size: 14px;
+  color: #383838;
+  margin-bottom: 20px;
+}
+
+.modal-success__text p {
+  margin-bottom: 7px;
+}
+
+.modal-success__text p a {
+  display: block;
+  font-size: 14px;
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.modal-success__btn {
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+@media (max-width: 400px) {
+  .modal-success-wrap {
+    width: 87%;
+  }
+}
+
 .navbar {
   margin-bottom: 0;
 }
 
 .block {
   display: block;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .hidden {

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Балаклава | О нас</title>
+  <title>Балаклава | Русская баня</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="css/bathhouse_style.css">
 </head>
@@ -74,30 +74,30 @@
 
     <section class="slider">
       <div class="container">
-      <div class="slider-box">
-        <div class="slider-box__img"><img src="img/bathhouse/1-2x.png" alt=""></div>
-        <div class="slider-box__img"><img src="img/bathhouse/2-2x.jpg" alt=""></div>
-        <div class="slider-box__img"><img src="img/bathhouse/3-2x.jpg" alt=""></div>
-        <div class="slider-box__img"><img src="img/bathhouse/4-2x.jpg" alt=""></div>
-        <div class="slider-box__img"><img src="img/bathhouse/5-2x.jpg" alt=""></div>
-        <div class="slider-box__img"><img src="img/bathhouse/6-2x.jpg" alt=""></div>
-        <div class="slider-box__img"><img src="img/bathhouse/1-2x.png" alt=""></div>
-        <div class="slider-box__img"><img src="img/bathhouse/2-2x.jpg" alt=""></div>
-        <div class="slider-box__img"><img src="img/bathhouse/3-2x.jpg" alt=""></div>
-        <div class="slider-box__img"><img src="img/bathhouse/4-2x.jpg" alt=""></div>
-      </div>
-      <div class="slider-nav">
-        <div class="slider-nav__img"><img src="img/bathhouse/1.png" alt=""></div>
-        <div class="slider-nav__img"><img src="img/bathhouse/2.png" alt=""></div>
-        <div class="slider-nav__img"><img src="img/bathhouse/3.png" alt=""></div>
-        <div class="slider-nav__img"><img src="img/bathhouse/4.png" alt=""></div>
-        <div class="slider-nav__img"><img src="img/bathhouse/5.png" alt=""></div>
-        <div class="slider-nav__img"><img src="img/bathhouse/6.png" alt=""></div>
-        <div class="slider-nav__img"><img src="img/bathhouse/1.png" alt=""></div>
-        <div class="slider-nav__img"><img src="img/bathhouse/2.png" alt=""></div>
-        <div class="slider-nav__img"><img src="img/bathhouse/3.png" alt=""></div>
-        <div class="slider-nav__img"><img src="img/bathhouse/4.png" alt=""></div>
-      </div>
+        <div class="slider-box">
+          <div class="slider-box__img"><img src="img/bathhouse/1-2x.png" alt=""></div>
+          <div class="slider-box__img"><img src="img/bathhouse/2-2x.jpg" alt=""></div>
+          <div class="slider-box__img"><img src="img/bathhouse/3-2x.jpg" alt=""></div>
+          <div class="slider-box__img"><img src="img/bathhouse/4-2x.jpg" alt=""></div>
+          <div class="slider-box__img"><img src="img/bathhouse/5-2x.jpg" alt=""></div>
+          <div class="slider-box__img"><img src="img/bathhouse/6-2x.jpg" alt=""></div>
+          <div class="slider-box__img"><img src="img/bathhouse/1-2x.png" alt=""></div>
+          <div class="slider-box__img"><img src="img/bathhouse/2-2x.jpg" alt=""></div>
+          <div class="slider-box__img"><img src="img/bathhouse/3-2x.jpg" alt=""></div>
+          <div class="slider-box__img"><img src="img/bathhouse/4-2x.jpg" alt=""></div>
+        </div>
+        <div class="slider-nav">
+          <div class="slider-nav__img"><img src="img/bathhouse/1.png" alt=""></div>
+          <div class="slider-nav__img"><img src="img/bathhouse/2.png" alt=""></div>
+          <div class="slider-nav__img"><img src="img/bathhouse/3.png" alt=""></div>
+          <div class="slider-nav__img"><img src="img/bathhouse/4.png" alt=""></div>
+          <div class="slider-nav__img"><img src="img/bathhouse/5.png" alt=""></div>
+          <div class="slider-nav__img"><img src="img/bathhouse/6.png" alt=""></div>
+          <div class="slider-nav__img"><img src="img/bathhouse/1.png" alt=""></div>
+          <div class="slider-nav__img"><img src="img/bathhouse/2.png" alt=""></div>
+          <div class="slider-nav__img"><img src="img/bathhouse/3.png" alt=""></div>
+          <div class="slider-nav__img"><img src="img/bathhouse/4.png" alt=""></div>
+        </div>
       </div>
     </section>
 
@@ -135,30 +135,15 @@
             </p>
           </div>
         </div>
-        <form action="#" class="feedback__form form-submit">
-          <div class="feedback__form-group">
-            <div class="feedback__input-wrap">
-              <input type="text" class="feedback__input input input-name" id="user__name" name="user__name" placeholder="Ваше имя..." required>
-              <div class="error error-name"></div>
-            </div>
-            <div class="feedback__input-wrap">
-              <input type="tel" class="feedback__input input input-tel" id="user__tel" name="user__tel" placeholder="Ваш номер телефона..." pattern="\+7[0-9]{10}" required>
-              <div class="error error-phone"></div>
-            </div>
-            <div class="feedback__input-wrap">
-              <input type="email" class="feedback__input input input-email" id="user__email" name="user__email" placeholder="Ваш e-mail..." pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" required>
-              <div class="error error-email"></div>
-            </div>
-          </div>
-          <textarea class="feedback__textarea textarea" name="message" id="user__message" cols="30" rows="10" placeholder="Ваше сообщение..."></textarea>
-          <button class="feedback__btn btn-submit btn" type="submit">арендовать баню!</button>
-        </form>
+        <?php include('modal-feedback.php'); ?>
       </div>
     </section>
 
+  <?php include('modal-success.php'); ?>
   <?php include('footer.php'); ?>
+  
+  <script src="/balaclava/js/callModalWindow.js"></script>
   <script src="js/slick.min.js"></script>
-  <script src="js/validate-and-sendMail.js"></script>
   <script src="js/slick_customize.js"></script>
 <body>
 </body>

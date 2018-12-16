@@ -26,40 +26,6 @@
       +roboto-light
       font-size: 14px
       line-height: 21px
-  &__form
-    max-width: 976px
-    margin: 0 auto
-    &-group
-      display: flex
-      justify-content: space-between
-  &__input
-    width: 100%
-    position: relative
-    background:
-      repeat: no-repeat
-      position: 14px 50%
-    &[type="text"]
-      background-image: url('../img/form/name.png')
-    &[type="tel"]
-      background-image: url('../img/form/tel.png')
-    &[type="email"]
-      background-image: url('../img/form/mail.png')
-    &-wrap
-      width: 32.7%
-      margin-bottom: 12px
-  &__textarea
-    width: 100%
-    height: 96px
-    margin-bottom: 24px
-    background:
-      repeat: no-repeat
-      position: 17px 12px
-      image: url('../img/form/message.png')
-  &__btn
-    display: block
-    margin: 0 auto
-    width: 184px
-
 
 @media (max-width: $lg)
   .feedback
@@ -69,7 +35,6 @@
   .feedback
     &__subcaption     
       font-size: 35px 
-
 
 @media (max-width: $sm)
   .feedback
@@ -85,13 +50,6 @@
       margin-bottom: 8px
       &-title
         font-size: 15px
-    &__form
-      &-group
-        display: block
-        // flex-direction: column
-        // align-items: flex-start
-    &__input-wrap
-      width: 100%
 
 @media (max-width: $xs)
   .feedback
@@ -104,11 +62,7 @@
         font-size: 14px 
 @media (max-width: $xxs)
   .feedback
-    // padding: 25px 0
-    &__subcaption     
-      // font-size: 22px  
     &__rule
-      // margin-bottom: 5px
       &-title
         font-size: 13px 
         text-transform: none 

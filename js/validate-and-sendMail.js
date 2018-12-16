@@ -2,7 +2,7 @@ $(document).ready(function (){
   $('form .error').css('visibility', 'hidden');
                         
   $('.btn-submit').on('click', function (event) {
-    console.log('ku-ku')
+    // console.log('ku-ku')
     event.preventDefault();
     var flag = true;
     var form = $(this).parent();
@@ -14,8 +14,8 @@ $(document).ready(function (){
     var errorNameL = form.find('.error-name');
     var errorPhoneL = form.find('.error-phone');
     var errorEmailL = form.find('.error-email');
-    console.log(errorNameL);
-    console.log(errorPhoneL);
+    // console.log(errorNameL);
+    // console.log(errorPhoneL);
     // console.log(nameTrim.match(/^[0-9a-zA-ZА-Яа-я\s]*$/));
     // console.log(phone.match(/\+7[0-9]{10}/));
     //проверка телефона
@@ -64,7 +64,9 @@ $(document).ready(function (){
         data: form.serialize()
       }).done(function () {
         form.find(".form-submit input").val("");
-        $('#modal-success').toggleClass('flex');
+        form.find(".form-submit textarea").val("");
+        $('.modal-success').toggleClass('flex');
+        $('.feedback-index').toggleClass('flex');
         form.trigger("reset");
       });
       errorNameL.css('visibility', 'hidden');
