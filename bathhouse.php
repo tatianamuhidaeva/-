@@ -8,6 +8,7 @@
   <title>Балаклава | Русская баня</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="css/bathhouse_style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
   <?php include('navbar.php'); ?>
   <section class="main">
@@ -74,7 +75,7 @@
 
     <section class="slider">
       <div class="container">
-        <div class="slider-box">
+        <div class="slider-box" id="bathhouse-slider-box">
           <div class="slider-box__img"><img src="img/bathhouse/1-2x.png" alt=""></div>
           <div class="slider-box__img"><img src="img/bathhouse/2-2x.jpg" alt=""></div>
           <div class="slider-box__img"><img src="img/bathhouse/3-2x.jpg" alt=""></div>
@@ -86,7 +87,7 @@
           <div class="slider-box__img"><img src="img/bathhouse/3-2x.jpg" alt=""></div>
           <div class="slider-box__img"><img src="img/bathhouse/4-2x.jpg" alt=""></div>
         </div>
-        <div class="slider-nav">
+        <div class="slider-nav" id="bathhouse-slider-nav">
           <div class="slider-nav__img"><img src="img/bathhouse/1.png" alt=""></div>
           <div class="slider-nav__img"><img src="img/bathhouse/2.png" alt=""></div>
           <div class="slider-nav__img"><img src="img/bathhouse/3.png" alt=""></div>
@@ -144,7 +145,7 @@
   
   <script src="/balaclava/js/callModalWindow.js"></script>
   <script src="js/slick.min.js"></script>
-  <script src="js/slick_customize.js"></script>
+  <script src="js/bathhouse-slick_customize.js"></script>
 <body>
 </body>
 </html>

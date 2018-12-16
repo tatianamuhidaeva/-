@@ -14,7 +14,7 @@
         "../sass/bathhouse/_main.sass",
         "../sass/bathhouse/_advanges.sass",
         "../sass/bathhouse/_description.sass",
-        "../sass/modules/_slider.sass",
+        "../sass/bathhouse/_slider.sass",
         "../sass/bathhouse/_feedback.sass",
         "../sass/modules/_modal-feedback.sass",
         "../sass/modules/_footer.sass",

@@ -1,10 +1,10 @@
 $(document).ready(function (){
-  $('.slider-box').slick({
+  $('#bathhouse-slider-box').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     swipe: false,
     arrows: false,
-    asNavFor: '.slider-nav',
+    asNavFor: '#bathhouse-slider-nav',
     responsive: [
       {
         breakpoint: 768,
@@ -14,13 +14,13 @@ $(document).ready(function (){
       }
     ]       
   });
-  $('.slider-nav').slick({
+  $('#bathhouse-slider-nav').slick({
     slidesToShow: 6,
     slidesToScroll: 1,
     swipe: false,
     // centerMode: true,
     // variableWidth: true,
-    asNavFor: '.slider-box',
+    asNavFor: '#bathhouse-slider-box',
     focusOnSelect: true,
     prevArrow: '<div class="arrow arrow-prev"></div>',
     nextArrow: '<div class="arrow arrow-next"></div>',

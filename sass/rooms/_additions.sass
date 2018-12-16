@@ -1,0 +1,102 @@
+.additions
+  padding: 47px 0 55px
+  border-bottom: 5px solid $barier-color
+  margin-bottom: 20px
+  background-color: $bg-light-color
+  &__subtitle
+    color: $text-color
+    +roboto-bold
+    font-size: 30px
+    margin-bottom: 30px 
+
+  &-list
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+    p0-auto
+    &__item
+      position: relative
+      max-width: 360px
+      border-bottom: 3px solid #eeeeee
+      background-color: #ffffff
+      cursor: pointer
+      margin-bottom: 30px
+      &:not(:nth-child(3n))
+        margin-right: 30px
+    &__href
+      display: block
+      width: 100%
+      height: 100%
+      position: absolute
+      +roboto-bold
+      font-size: 19px
+      line-height: 24px
+      color: transparent
+      text-decoration: none
+      text-align: center
+      padding: 137px 0
+      transition-delay: 0.2s
+      transition-duration: 0.4s
+      &:hover
+        background-color: rgba(0,0,0,0.23)
+        color: #ffffff
+    &-text
+      height: 124px
+      padding: 13px 20px
+      text-align: left
+    &__decor
+      width: 40px
+      height: 2px
+      background-color: #cccccc
+      margin-top: 10px
+      margin-bottom: 20px          
+    &__text
+      +roboto-bold
+      font-size: 19px
+      line-height: 24px
+      margin-bottom: 18px
+
+
+@media (max-width: 1199px)  
+  .additions 
+    &-list
+      max-width: 750px
+      margin: 0 auto
+      &__item
+        &:not(:nth-child(3n))
+          margin-right: 0
+        &:not(:nth-child(2n))
+          margin-right: 30px          
+@media (max-width: $md)          
+  .additions
+    padding: 55px 0 50px
+@media (max-width: 806px)
+  .additions
+    &-list
+      flex-direction: column
+      align-items: center
+      &__item
+        margin-right: 0
+        &:not(:nth-child(2n))
+          margin-right: 0 
+@media (max-width: $sm)          
+  .additions
+    padding: 40px 0
+    &__subtitle
+      font-size: 28px
+@media (max-width: $xs)
+  .additions
+    padding: 25px 0
+    &__subtitle
+      font-size: 25px
+    &-list
+      &__item
+        margin-bottom: 20px 
+      &-text
+        padding: 15px 15px        
+      &__decore
+        margin-top: 10px
+        margin-bottom: 10px            
+      &__text
+        font-size: 16px
+        margin-bottom: 0px          
