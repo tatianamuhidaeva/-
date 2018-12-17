@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="ru">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Балаклава | Главная</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link rel="stylesheet" href="css/index_style.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<?php include('head.php') ?>
+    <title>Балаклава | Главная</title>
+    <link rel="stylesheet" href="css/index_style.css">
 </head>
 
 <body>
@@ -30,6 +23,16 @@
       </nav>
     </div>
   </div>
+  <section class="feedback-index">
+    <div class="feedback-index-wrap">
+      <div class="feedback-index__close">&#10006;</div>
+      <div class="feedback-index__header">Арендовать номер прямо сейчас!</div>
+      <div class="feedback-index__body">
+        <?php include('modal-feedback.php'); ?>  
+      </div>          
+    </div>
+  </section>  
+  <?php include('modal-success.php'); ?>  
   <section class="main">
     <div class="container">
       <div class="main-wrap">
@@ -45,16 +48,6 @@
     </div>
   </section>
 
-  <section class="feedback-index">
-    <div class="feedback-index-wrap">
-      <div class="feedback-index__close">&#10006;</div>
-      <div class="feedback-index__header">Арендовать баню прямо сейчас!</div>
-      <div class="feedback-index__body">
-        <?php include('modal-feedback.php'); ?>  
-      </div>          
-    </div>
-  </section>  
-  <?php include('modal-success.php'); ?>
   <section class="welcome">
     <div class="container welcome-wrap">
       <div class="welcome-text">
@@ -206,7 +199,8 @@
         <!-- /.landmarks__card -->
       </div>
       <!-- /.landmarks__cards -->
-      <button class="landmarks__btn btn">больше статей!</button>
+      <!-- <button class="landmarks__btn btn">больше статей!</button> -->
+      <a class="landmarks__btn btn" href="landmarks.php">Показать номера!</a>
     </div>
   </section>
 
@@ -238,7 +232,14 @@
       </p>
     </div>
   </footer>
-  <script src="/balaclava/js/togglerMenu.js"></script>
-  <script src="/balaclava/js/callModalWindow.js"></script>    
+    <script>
+      $(document).ready(function (){
+        $('.feedback__btn').text("Арендовать номер");      
+      });
+    </script>
+    <script src="/balaclava/js/togglerMenu.js"></script>
+    <script src="/balaclava/js/callModalWindow.js"></script>    
+    <script src="/balaclava/js/validate-and-sendMail.js"></script>
+
 </body>
 </html>

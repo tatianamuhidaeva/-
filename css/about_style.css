@@ -418,6 +418,8 @@ template {
   text-decoration: none;
   line-height: 50px;
   cursor: pointer;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 
 .btn-o:hover {
@@ -433,8 +435,8 @@ template {
   background: #3fc380;
   outline: none;
   border: transparent;
-  -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: 0 0 0 3px rgba(68, 68, 68, 0.25);
+          box-shadow: 0 0 0 3px rgba(68, 68, 68, 0.25);
   border-radius: 27px;
   font-family: 'Roboto Medium' , sans-serif;
   font-size: 13px;
@@ -443,15 +445,21 @@ template {
   text-decoration: none;
   line-height: 50px;
   cursor: pointer;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 
 .btn:hover {
-  -webkit-box-shadow: 0 0 0 3px #f3f3f3;
-          box-shadow: 0 0 0 3px #f3f3f3;
+  -webkit-box-shadow: 0 0 0 3px rgba(68, 68, 68, 0.5);
+          box-shadow: 0 0 0 3px rgba(68, 68, 68, 0.5);
 }
 
 .btn:focus {
   outline: none;
+}
+
+.btn:disabled {
+  background-color: #8ddbb3;
 }
 
 .input {
@@ -501,11 +509,11 @@ template {
 }
 
 .arrow-prev {
-  background-image: url("../img/arrow-prev.png");
+  background-image: url("../img/arrow-prev.svg");
 }
 
 .arrow-next {
-  background-image: url("../img/arrow-next.png");
+  background-image: url("../img/arrow-next.svg");
 }
 
 @media (max-width: 768px) {
@@ -531,6 +539,11 @@ h1, h2, h3, h4, h5, h6, p {
 
 img {
   max-width: 100%;
+}
+
+a {
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 
 .container {
@@ -683,6 +696,12 @@ img {
   font-size: 19px;
   color: #2a2a2a;
   text-decoration: none;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.navbar-contacts__phone:hover {
+  color: gray;
 }
 
 .navbar-contacts__address {
@@ -917,6 +936,10 @@ img {
   color: #ffffff;
 }
 
+.footer-copyright__text a:hover {
+  color: #e6e6e6;
+}
+
 @media (max-width: 1095px) {
   .footer-navbar__item {
     padding-left: 12px;
@@ -967,6 +990,10 @@ img {
 
 .hidden {
   display: none;
+}
+
+.unvisible {
+  visibility: hidden;
 }
 
 @media (max-width: 1200px) {

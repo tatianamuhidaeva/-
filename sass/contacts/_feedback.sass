@@ -1,0 +1,128 @@
+.feedback-socials
+  
+  border-bottom: 5px solid $barier-color
+  margin-bottom: 19px
+  &-wrap
+    display: flex
+  &__title
+    color: $text-color
+    +roboto-bold
+    font-size: 30px
+    margin-bottom: 20px
+.feedback
+  width: 74%  
+  padding: 70px 0 33px
+  &__input
+    &-wrap
+      width: 49%
+  &__textarea
+    height: 150px
+    margin-bottom: 18px
+  &__recaptcha
+    transform: scale(0.83)
+    // transform-origin: 0 0
+    
+  &__btn
+    margin: 0
+    margin-left: 20px
+    &-wrap
+      display: flex
+      justify-content: center
+      align-items: center
+.socials
+  width: 24%
+  padding: 70px 0 33px
+  padding-left: 3%
+  &__href
+    display: block
+    position: relative
+    max-width: 232px
+    height: 44px
+    padding-left: 55px
+    z-index: 0
+    margin-bottom: 3px
+    +roboto-regular
+    +text-up(13px, #ffffff)
+    line-height: 44px
+    text-decoration: none    
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 41px
+      height: 44px
+      border-right: 1px solid rgba(#ffffff, 0.4)
+      background:
+        repeat: no-repeat
+        position: 50% 50%
+        
+      z-index: 2
+    &-vk
+      background-color: #4c75a3
+      &:hover
+        background-color: lighten(#4c75a3, 20%)      
+    &-vk::before
+      background-image: url('../img/social/vk.svg')
+      background-size: 22px auto
+    &-fb
+      background-color: #3b5a9b
+      &:hover
+        background-color: lighten(#3b5a9b, 20%)       
+    &-fb::before
+      background-image: url('../img/social/fb.svg')
+      background-size: 20px auto
+    &-gg
+      background-color: #dc4a38
+      &:hover
+        background-color: lighten(#dc4a38, 20%)       
+    &-gg::before
+      background-image: url('../img/social/gg.svg')
+      background-size: 20px auto
+  
+@media (max-width: $lg) 
+  .feedback-socials
+    &__title
+      font-size: 27px
+@media (max-width: $md) 
+  .feedback-socials
+    &__title
+      font-size: 21px
+@media (max-width: $sm) 
+  .feedback-socials
+    &-wrap
+      flex-direction: column
+    &__title
+      font-size: 21px
+  .feedback
+    width: 100%
+    padding: 40px 0 30px
+    &__input
+      &-wrap
+        width: 100%    
+  .socials
+    width: 100%
+    padding: 30px 0 33px
+    &__href
+      display: inline-block
+      width: 32%
+
+@media (max-width: $xs)
+  .feedback
+    padding: 25px 0 20px
+    &__btn
+      margin-left: 0
+    &__recaptcha
+      margin-bottom: 10px
+    &__btn-wrap
+      flex-direction: column
+      align-items: center
+  .socials
+    padding: 20px 0 25px
+    &-wrap
+      display: flex
+      justify-content: center
+    &__href
+      width: 41px
+      padding-left: 41px
+      margin-right: 10px

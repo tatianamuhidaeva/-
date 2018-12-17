@@ -2,7 +2,7 @@
 <div class="navbar">
     <div class="container navbar-wrap">
       <div class="navbar-wrap-group">
-        <a class="navbar__logo" href="#">
+        <a class="navbar__logo" href="/balaclava/index.php">
         <img src="/balaclava/img/logo.png" alt="Логотип Балаклавы">
         </a>
         <nav class="navbar__menu">

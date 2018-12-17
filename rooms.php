@@ -1,17 +1,18 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Балаклава | Русская баня</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<?php include('head.php') ?>
+  <title>Балаклава | Номера</title>
   <link rel="stylesheet" href="css/rooms_style.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
   <?php include('navbar.php'); ?>
-
+  <?php include('modal-success.php'); ?>
+  <section class="feedback-index">
+    <div class="feedback-index-wrap">
+      <div class="feedback-index__close">&#10006;</div>
+      <div class="feedback-index__header">Арендовать номер прямо сейчас!</div>
+        <div class="feedback-index__body">
+          <?php include('modal-feedback.php'); ?>  
+        </div>          
+      </div>
+    </section> 
   <section class="rooms">
     <div class="container">
       <h2 class="rooms__title">Наши комфортабельные номера!</h2>
@@ -64,7 +65,7 @@
         </div>
         <div class="rooms-info">
           <div class="rooms__decor"></div>
-          <div class="rooms__subtitle">2-х комнатный четырёхместный номер.</div>
+          <div class="rooms__subtitle">2-х комнатный улучшенный четырёхместный номер.</div>
           <p class="rooms__text">2-х комнатный улучшенный четырёхместный номер с гостиной, кухней, большой террасой и отдельным входом, с видом на Генуэзскую крепость. Лучше всего подойдёт для семьи с детьми или компании. Возможно дополнительное место. (оговаривается).</p>
           <div class="rooms__price">
               <p>Стоимость: 2400р в сутки.</p>
@@ -94,7 +95,7 @@
         </div>
         <div class="rooms-info">
           <div class="rooms__decor"></div>
-          <div class="rooms__subtitle">2-х комнатный четырёхместный номер.</div>
+          <div class="rooms__subtitle">2-х местные номера.</div>
           <p class="rooms__text">2-х комнатный улучшенный четырёхместный номер с гостиной, кухней, большой террасой и отдельным входом, с видом на Генуэзскую крепость. Лучше всего подойдёт для семьи с детьми или компании. Возможно дополнительное место. (оговаривается).</p>
           <div class="rooms__price">
               <p>Стоимость: 2400р в сутки.</p>
@@ -124,7 +125,7 @@
         </div>
         <div class="rooms-info">
           <div class="rooms__decor"></div>
-          <div class="rooms__subtitle">2-х комнатный четырёхместный номер.</div>
+          <div class="rooms__subtitle">2-х местные номера эконом класса.</div>
           <p class="rooms__text">2-х комнатный улучшенный четырёхместный номер с гостиной, кухней, большой террасой и отдельным входом, с видом на Генуэзскую крепость. Лучше всего подойдёт для семьи с детьми или компании. Возможно дополнительное место. (оговаривается).</p>
           <div class="rooms__price">
               <p>Стоимость: 2400р в сутки.</p>
@@ -154,7 +155,7 @@
         </div>
         <div class="rooms-info">
           <div class="rooms__decor"></div>
-          <div class="rooms__subtitle">2-х комнатный четырёхместный номер.</div>
+          <div class="rooms__subtitle">3-х и 4-х местные номера эконом класса.</div>
           <p class="rooms__text">2-х комнатный улучшенный четырёхместный номер с гостиной, кухней, большой террасой и отдельным входом, с видом на Генуэзскую крепость. Лучше всего подойдёт для семьи с детьми или компании. Возможно дополнительное место. (оговаривается).</p>
           <div class="rooms__price">
               <p>Стоимость: 2400р в сутки.</p>
@@ -167,7 +168,7 @@
       </div>
     </div>
   </section>
-
+  
   <section class="additions">
   <div class="container">
         <h3 class="additions__subtitle">Дополнительные услуги за отдельную плату:</h3>
@@ -259,6 +260,13 @@
   </section>
   
   <?php include('footer.php'); ?>
+  <script>
+      $(document).ready(function (){
+        $('.feedback__btn').text("Арендовать номер");      
+      });
+    </script>
+  <script src="/balaclava/js/callModalWindow.js"></script>
+  <script src="/balaclava/js/validate-and-sendMail.js"></script>  
   <script src="js/slick.min.js"></script>
   <script src="js/rooms-slick_customize.js"></script>
 <body>

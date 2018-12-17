@@ -2,10 +2,9 @@ $(document).ready(function (){
   $('form .error').css('visibility', 'hidden');
                         
   $('.btn-submit').on('click', function (event) {
-    // console.log('ku-ku')
     event.preventDefault();
     var flag = true;
-    var form = $(this).parent();
+    var form = $(this).closest('.form-submit');
     var name = form.find(".input-name").val(),
         phone = form.find(".input-tel").val();
         email = form.find(".input-email").val();
@@ -14,17 +13,13 @@ $(document).ready(function (){
     var errorNameL = form.find('.error-name');
     var errorPhoneL = form.find('.error-phone');
     var errorEmailL = form.find('.error-email');
-    // console.log(errorNameL);
-    // console.log(errorPhoneL);
-    // console.log(nameTrim.match(/^[0-9a-zA-ZА-Яа-я\s]*$/));
-    // console.log(phone.match(/\+7[0-9]{10}/));
     //проверка телефона
     if (phone === ""){
       errorPhoneL.text('Пожалуйста, введите номер');
       errorPhoneL.css('visibility', 'visible');
       flag = false;
-    } else if (phone.match(/\+7[0-9]{10}/) === null){
-      errorPhoneL.text('Введите номер в формате +79998877666');
+    } else if (phone.match(/\+7\([0-9]{3}\)[0-9]{3}\-[0-9]{2}\-[0-9]{2}/) === null){
+      errorPhoneL.text('Введите номер в формате +7(999)887-76-66');
       errorPhoneL.css('visibility', 'visible');
       flag = false;
     } else {
@@ -57,7 +52,15 @@ $(document).ready(function (){
       errorEmailL.css('visibility', 'hidden');
     }
     if (flag){
-      // yaCounter51427879.reachGoal('btn');  //Яндекс-метрика. Цель ОТПРАВКА Заявки
+      /* Если поле .is-callback не пустое, то это Обратная связь, иначе - это Заявка */
+      // console.log(form.find('.is-callback').val());
+      if (form.find('.is-callback').val()){
+        // console.log('Яндекс-метрика. Цель ОТПРАВКА Обратной связи');
+        yaCounter51608246.reachGoal('callback');  //Яндекс-метрика. Цель ОТПРАВКА Обратной связи
+      } else{
+        // console.log('Яндекс-метрика. Цель ОТПРАВКА Заявки');
+        yaCounter51608246.reachGoal('order');  //Яндекс-метрика. Цель ОТПРАВКА Заявки
+      }
       $.ajax({
         type: "POST",
         url: "./mailer/smart.php",
@@ -66,7 +69,7 @@ $(document).ready(function (){
         form.find(".form-submit input").val("");
         form.find(".form-submit textarea").val("");
         $('.modal-success').toggleClass('flex');
-        $('.feedback-index').toggleClass('flex');
+        $('.feedback-index').removeClass('flex');
         form.trigger("reset");
       });
       errorNameL.css('visibility', 'hidden');

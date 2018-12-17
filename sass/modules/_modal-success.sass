@@ -40,7 +40,10 @@
       margin-bottom: 7px
       a
         display: block
-        +text-up(14px, #000)
+        +text-up(14px, #000000)
+        transition-duration: 0.2s
+        &:hover
+          color: lighten(#000000, 50%)
   &__btn
     margin-bottom: 20px
     width: 200px

@@ -8,6 +8,7 @@
   +text-up(13px, #ffffff)
   line-height: 50px
   cursor: pointer
+  transition-duration: 0.2s
   &:hover
     background-color: $primary-color
   &:focus
@@ -17,16 +18,23 @@
   background: $primary-color 
   outline: none
   border: transparent
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.23)
+  // border: 3px solid #f3f3f3
+  box-shadow: 0 0 0 3px rgba(#444444, 0.25)
+  // box-shadow: 0 0 0 3px #c4c4c4
   border-radius: 27px
   +roboto-medium
   +text-up(13px, #ffffff)
   line-height: 50px
   cursor: pointer 
+  transition-duration: 0.2s
   &:hover
-    box-shadow: 0 0 0 3px #f3f3f3
+    // border: 3px solid #c4c4c4
+    box-shadow: 0 0 0 3px rgba(#444444, 0.5)
+    // color: darken(#ffffff, 20%)    
   &:focus
     outline: none  
+  &:disabled
+    background-color: lighten($primary-color, 20%)
 .input
   height: 53px
   background: #ffffff
@@ -65,9 +73,9 @@
     size: 6px 25px
   cursor: pointer
   &-prev
-    background-image: url('../img/arrow-prev.png')
+    background-image: url('../img/arrow-prev.svg')
   &-next
-    background-image: url('../img/arrow-next.png')
+    background-image: url('../img/arrow-next.svg')
 
 @media (max-width: $sm)
   .btn-o

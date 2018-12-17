@@ -4,6 +4,8 @@ $name = $_POST['user__name'];
 $phone = $_POST['user__phone'];
 $email = $_POST['user__email'];
 $msg = $_POST['user__message'];
+$call = $_POST['is-callback'];
+
 
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
@@ -29,7 +31,13 @@ $mail->addAddress('batagaeva.ta@gmail.com');     // Add a recipient
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Тест Балаклавы';
+if($call) {
+	$mail->Subject = 'С сайта Балаклавы. Обратный звонок';
+} else {
+	$mail->Subject = 'С сайта Балаклавы. Заявка';
+}
+
+
 $mail->Body    = '
 	Пользователь оставил свои данные <br> 
 	Имя: ' . $name . ' <br>

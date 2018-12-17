@@ -1,29 +1,32 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<?php include('head.php') ?>
   <title>Балаклава | Русская баня</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="css/bathhouse_style.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
   <?php include('navbar.php'); ?>
+  <?php include('modal-success.php'); ?>
+  <section class="feedback-index">
+    <div class="feedback-index-wrap">
+      <div class="feedback-index__close">&#10006;</div>
+      <div class="feedback-index__header">Арендовать баню прямо сейчас!</div>
+        <div class="feedback-index__body">
+          <?php include('modal-feedback.php'); ?>  
+        </div>          
+      </div>
+    </section>
+        
   <section class="main">
     <div class="container">
       <div class="main-wrap">
         <h1 class="main__caption">баня в балаклаве</h1>
         <h1 class="main__subcaption">Отдых душой и телом</h1>
         <p class="main__text">
-        Русская баня давно завоевала мировое признание. Миллионы людей постоянно прибегают к этому простому и надежному способу поддерживать здоровье, красоту, 
-жизненный тонус и хорошее настроение. 
+          Русская баня давно завоевала мировое признание. Миллионы людей постоянно прибегают к этому простому и надежному способу поддерживать здоровье, красоту, жизненный тонус и хорошее настроение. 
         </p>
         <button class="main__btn btn">арендовать баню!</button>
       </div>
     </div>
     </section>
+
     <section class="advanges">
       <div class="container">
         <div class="advanges-cards">
@@ -139,11 +142,10 @@
         <?php include('modal-feedback.php'); ?>
       </div>
     </section>
-
-  <?php include('modal-success.php'); ?>
   <?php include('footer.php'); ?>
   
   <script src="/balaclava/js/callModalWindow.js"></script>
+  <script src="/balaclava/js/validate-and-sendMail.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/bathhouse-slick_customize.js"></script>
 <body>

@@ -4,8 +4,11 @@ $(document).ready(function (){
     $('.modal-success').toggleClass('flex');
   });
 
-  /* Главная. Отправка заявки */
+  /* Главная, Номера. Отправка заявки */
   $('.main__btn').on('click', function () {
+    $('.feedback-index').toggleClass('flex');
+  });
+  $('.rooms__btn').on('click', function () {
     $('.feedback-index').toggleClass('flex');
   });
   $('.feedback-index__close').on('click', function () {

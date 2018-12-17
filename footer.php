@@ -1,7 +1,7 @@
 <footer class="footer">
       <div class="container footer-navbar navbar-wrap">
         <div class="navbar-wrap-group">
-          <a class="footer-navbar__logo navbar__logo" href="#">
+          <a class="footer-navbar__logo navbar__logo" href="/balaclava/index.php">
             <img src="/balaclava/img/logo.png" alt="Логотип Балаклавы">
           </a>
           <nav class="footer-navbar__menu navbar__menu">
@@ -32,7 +32,7 @@
       </div>
         
       <div class="container footer-copyright">
-      <p class="footer-copyright__text"><a href="www.rus-sauna.com"> &copy;
+      <p class="footer-copyright__text"><a href="https://www.rus-sauna.com" target="_blank"> &copy;
           www.rus-sauna.com</a></p>
       <p class="footer-copyright__text">
         Стиль, оформление, дизайн и содержание являются объектами авторского права и
